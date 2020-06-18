@@ -1,0 +1,36 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="main">
+        
+    <mat-card fxFlex="20">
+        <pre style="font-weight: bold;">        Available Trainers</pre><hr />
+        <pre style="font-weight: bold;">   ID     Name</pre>
+        <ul>
+            <li *ngFor="let user of userList">{{user.userID}} => {{user.userName}}</li>
+        </ul>
+    </mat-card>
+
+    <div fxFlex>
+        <mat-card fxFlex="20">
+            <form [formGroup]="addForm" fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="addTrainer()">
+                <mat-toolbar color="primary">ADD NEW TRAINER</mat-toolbar>
+
+                <mat-form-field appearance="standard">
+                    <mat-label>Trainer ID</mat-label>
+                    <input matInput placeholder="Enter Trainer ID" formControlName="trainerID">
+                </mat-form-field>
+        
+                <mat-form-field appearance="standard">
+                    <mat-label>Course ID</mat-label>
+                    <input matInput placeholder="Enter Course ID" formControlName="courseID">
+                </mat-form-field>
+        
+                <button [disabled]="!addForm.valid" mat-raised-button color="primary" type="submit">
+                    ADD
+                </button>
+            </form>
+        </mat-card>
+    </div>
+
+</div>
+

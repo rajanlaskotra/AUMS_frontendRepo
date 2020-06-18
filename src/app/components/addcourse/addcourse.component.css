@@ -1,0 +1,10 @@
+.main mat-card{
+    padding: 0px;
+}
+
+mat-form-field{
+    padding: 4px 10px 4px 10px;
+}
+button{
+    margin: 0px 15px 8px 15px;
+}

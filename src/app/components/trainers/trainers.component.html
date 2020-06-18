@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+
+<mat-toolbar fxLayoutAlign = "center center"> 
+    <span fxFlex="80">All Trainers</span>
+    <button routerLink="/addtrainer" mat-flat-button color="primary">ADD TRAINER</button>
+</mat-toolbar>
+
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="trainerID">
+            <th mat-header-cell *matHeaderCellDef> Trainer ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.trainerID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseID">
+            <th mat-header-cell *matHeaderCellDef> Course ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseID}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseName">
+            <th mat-header-cell *matHeaderCellDef> Course Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element" class="names"> {{element.userName}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element"> {{element.userLocation}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="feedback">
+            <th mat-header-cell *matHeaderCellDef> Feedback </th>
+            <td mat-cell *matCellDef="let element" [style.color]="element.color"> {{element.feedback}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element"> <button mat-stroked-button (click)="deleteTrainer(element.trainerID, element.courseID)" color="accent">Delete</button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+</div>

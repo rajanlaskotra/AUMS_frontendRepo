@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+}
+.coursename{
+    font-weight: bold;
+}
+button:hover{
+    text-decoration: underline;
+}
+th{
+    font-weight: bolder;
+}

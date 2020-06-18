@@ -1,0 +1,12 @@
+.tlink{
+    margin-left: 6px;
+    word-wrap: break-word;
+}
+
+.mat-icon:hover {
+    cursor: pointer;
+}
+
+button:hover{
+    text-decoration: underline;
+}

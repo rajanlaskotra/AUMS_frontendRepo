@@ -1,0 +1,58 @@
+<app-nav-bar></app-nav-bar>
+<mat-toolbar fxLayoutAlign = "center center"> 
+    <span fxFlex="80">All Courses</span>
+    <button routerLink="/addcourse" mat-flat-button color="primary">ADD COURSE</button>
+</mat-toolbar>
+
+<div class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="dataSource">
+
+        <ng-container matColumnDef="courseID">
+            <th mat-header-cell *matHeaderCellDef> ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseID}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseName">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element" class="coursename"> {{element.courseName}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseDesc">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseDesc}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseSkill">
+            <th mat-header-cell *matHeaderCellDef> Skills </th>
+            <td mat-cell *matCellDef="let element"> {{element.courseSkills}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="coursePrerequisites">
+            <th mat-header-cell *matHeaderCellDef> Prerequisites </th>
+            <td mat-cell *matCellDef="let element"> {{element.coursePrerequisites}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="courseLocation">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element" [style.color]="element.color"> {{element.courseLocation}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element"> <button mat-stroked-button (click)="deleteCourse(element.courseID)" color="accent">Delete</button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef> Update </th>
+            <td mat-cell *matCellDef="let element"> <button mat-stroked-button routerLink="/updatecourse"  color="accent">Update</button>
+            </td>
+        </ng-container>
+        
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 50]"></mat-paginator>
+</div>

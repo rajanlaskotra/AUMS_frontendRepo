@@ -1,0 +1,16 @@
+.main{
+    margin-top: 180px;
+}
+.main mat-card{
+    padding: 0px;
+}
+.btn{
+    padding: 100px 60px 20px 60px;
+    word-wrap: break-word;
+}
+img{
+    padding: 5px;
+}
+mat-card{
+    border: 1px solid rgb(61, 61, 63);
+}

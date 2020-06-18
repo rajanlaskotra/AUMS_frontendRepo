@@ -1,0 +1,12 @@
+table {
+    width: 100%;
+}
+.names{
+    font-weight: bold;
+}
+button:hover{
+    text-decoration: underline;
+}
+th{
+    font-weight: bolder;
+}

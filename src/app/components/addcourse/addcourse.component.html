@@ -1,0 +1,38 @@
+<app-nav-bar></app-nav-bar>
+<div fxLayoutAlign="center center" fxFlexFill class="main">
+    <mat-card fxFlex="30">
+        <form [formGroup]="addForm" fxLayoutAlign="stretch" fxLayout="column" (ngSubmit)="addCourse()">
+            <mat-toolbar color="primary">ADD NEW COURSE</mat-toolbar>
+
+            <mat-form-field appearance="standard">
+                <mat-label>Course Name</mat-label>
+                <input matInput placeholder="Eg: Angular" formControlName="courseName">
+            </mat-form-field>
+        
+            <mat-form-field appearance="standard">
+                <mat-label>Course Description</mat-label>
+                <textarea matInput formControlName="courseDesc"> </textarea>
+            </mat-form-field>
+        
+            <mat-form-field appearance="standard">
+                <mat-label>Course Skills</mat-label>
+                <input matInput placeholder="Eg: SPAs" formControlName="courseSkills">
+            </mat-form-field>
+        
+            <mat-form-field appearance="standard">
+                <mat-label>Course PreRequisites</mat-label>
+                <input matInput placeholder="Eg: TypeScript, JS, etc" formControlName="coursePrerequisites">
+            </mat-form-field>
+        
+            <mat-form-field appearance="standard">
+                <mat-label>Course Location</mat-label>
+                <input matInput placeholder="Eg: Delhi,Mumbai,Bengaluru,etc" formControlName="courseLocation">
+            </mat-form-field>
+        
+            <button [disabled]="!addForm.valid" mat-raised-button color="primary" type="submit">
+                SAVE
+            </button>
+
+        </form>
+    </mat-card>
+</div>

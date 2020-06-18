@@ -1,0 +1,18 @@
+table {
+    width: 100%;
+}
+.coursename{
+    font-weight: bold;
+}
+button:hover{
+    text-decoration: underline;
+}
+button{
+    margin-left: 2px;
+}
+th{
+    font-weight: bolder;
+}
+mat-icon {
+    cursor: pointer;
+}

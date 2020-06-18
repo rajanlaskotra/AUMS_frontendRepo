@@ -1,0 +1,41 @@
+<app-nav-bar></app-nav-bar>
+<mat-toolbar></mat-toolbar>
+
+ <!-- <div fxLayoutAlign="center center" fxFlexFill></div>  -->
+<div fxLayoutAlign= "space-around center" fxLayout="row">
+    
+    <mat-card fxFlex="40">
+        <div>
+            <canvas baseChart
+                    [data]="doughnutChartData"
+                    [labels]="doughnutChartLabels"
+                    [chartType]="doughnutChartType"></canvas>
+        </div>
+            <h4 style="color:teal">Location  vs  Course</h4>
+    </mat-card>
+    
+    <mat-card fxFlex="40">
+        <div>
+            <canvas baseChart
+                    [data]="pieChartData"
+                    [labels]="pieChartLabels"
+                    [chartType]="pieChartType"></canvas>
+        </div>
+        <h4 style="color:teal">Location  vs  Trainer</h4>
+    </mat-card>
+
+    <mat-card fxFlex="15">
+        <!--<mat-card-header>
+            <mat-card-title>{{user.name}}</mat-card-title>
+        </mat-card-header> -->
+        <img mat-card-image src="{{user.photo}}" alt="{{user.name}}">
+        <i class="material-icons" style="font-size:20px">info</i>
+        <h4>{{user.name}}</h4>
+        <h4>{{user.email}}</h4>
+    </mat-card>
+  
+</div>
+
+<mat-toolbar fxLayoutAlign="center center" style="position: fixed; bottom: 0;">
+        {{time | date : "medium"}}
+</mat-toolbar>
