@@ -22,30 +22,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15% </span>
+                <span class="strong">95% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/20</span>
+                <span class='fraction'>19/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">11.11% </span>
+                <span class="strong">94.44% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/18</span>
+                <span class='fraction'>17/18</span>
             </div>
         
             
@@ -54,7 +54,7 @@
             Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
         </p>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -125,37 +125,37 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,37 +177,37 @@ import { CourseService } from 'src/app/services/courseService/course.service';
   styleUrls: ['./courses.component.css']
 })
 export class CoursesComponent implements OnInit {
-<span class="cstat-no" title="statement not covered" >  displayedColumns: string[] = ['courseID', 'courseName', 'courseDesc','courseSkill', 'coursePrerequisites','courseLocation','delete','update'];</span>
+  displayedColumns: string[] = ['courseID', 'courseName', 'courseDesc','courseSkill', 'coursePrerequisites','courseLocation','delete','update'];
   CourseList: any;
   dataSource: MatTableDataSource&lt;Course&gt;;
-<span class="cstat-no" title="statement not covered" >  form = new FormControl();</span>
+  form = new FormControl();
 &nbsp;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 &nbsp;
-<span class="fstat-no" title="function not covered" >  constructor(private <span class="cstat-no" title="statement not covered" >c</span>ourseService: C</span>ourseService, private <span class="cstat-no" title="statement not covered" >router: R</span>outer/*, private snackBar: MatSnackBar*/) { }
+  constructor(private courseService: CourseService, private router: Router/*, private snackBar: MatSnackBar*/) { }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  ngOnInit(</span>): void {
-<span class="cstat-no" title="statement not covered" >    if(!sessionStorage.getItem('userId')){</span>
+  ngOnInit(): void {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(!sessionStorage.getItem('userId')){
 <span class="cstat-no" title="statement not covered" >      this.router.navigate([`\login`]);</span>
     }
-<span class="cstat-no" title="statement not covered" >    this.courseService.getAllCourses().subscribe(<span class="fstat-no" title="function not covered" >(r</span>esponse) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      console.log(response);</span>
-<span class="cstat-no" title="statement not covered" >      this.CourseList = response;</span>
-<span class="cstat-no" title="statement not covered" >      this.dataSource = new MatTableDataSource(this.CourseList);</span>
-<span class="cstat-no" title="statement not covered" >      this.dataSource.paginator = this.paginator;</span>
-<span class="cstat-no" title="statement not covered" >      console.log(this.dataSource);</span>
+    this.courseService.getAllCourses().subscribe((response) =&gt; {
+      console.log(response);
+      this.CourseList = response;
+      this.dataSource = new MatTableDataSource(this.CourseList);
+      this.dataSource.paginator = this.paginator;
+      console.log(this.dataSource);
     });
   }
 &nbsp;
-<span class="fstat-no" title="function not covered" >  deleteCourse(</span>courseId) {
-<span class="cstat-no" title="statement not covered" >    console.log(courseId);</span>
-<span class="cstat-no" title="statement not covered" >    if(confirm('Are You Sure to delete the Course?')){</span>
-<span class="cstat-no" title="statement not covered" >      this.courseService.deleteCourse(courseId);</span>
-<span class="cstat-no" title="statement not covered" >      alert('Course Deleted Successfully');</span>
+  deleteCourse(courseId) {
+    console.log(courseId);
+    <span class="missing-if-branch" title="else path not taken" >E</span>if(confirm('Are You Sure to delete the Course?')){
+      this.courseService.deleteCourse(courseId);
+      alert('Course Deleted Successfully');
       /*this.snackBar.open("Course Deleted", "Success!", {
         duration: 2000,
       });*/
-<span class="cstat-no" title="statement not covered" >      this.ngOnInit();</span>
+      this.ngOnInit();
     }
   }
 &nbsp;
@@ -219,7 +219,7 @@ export class CoursesComponent implements OnInit {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Thu Jun 18 2020 22:19:56 GMT+0530 (India Standard Time)
+                at Mon Jun 22 2020 00:03:04 GMT+0530 (India Standard Time)
             </div>
         </div>
         <script src="..\..\..\..\prettify.js"></script>

@@ -24,7 +24,7 @@ export class AddtrainerComponent implements OnInit {
   constructor(private router: Router, private trainerService: TrainerService/*, private snackBar: MatSnackBar*/) { }
 
   ngOnInit(): void {
-    if(!sessionStorage.getItem('userName')){
+    if(!sessionStorage.getItem('userId')){
       this.router.navigate([`\login`]);
     }
     this.getUsers()

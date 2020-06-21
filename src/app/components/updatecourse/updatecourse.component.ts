@@ -22,7 +22,7 @@ export class UpdatecourseComponent implements OnInit {
   constructor(private router: Router, private courseService: CourseService) { }
 
   ngOnInit(): void {
-    if(!sessionStorage.getItem('userName')){
+    if(!sessionStorage.getItem('userId')){
       this.router.navigate([`\login`]);
     }
   }

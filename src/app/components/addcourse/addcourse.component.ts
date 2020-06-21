@@ -23,7 +23,7 @@ export class AddcourseComponent implements OnInit {
   constructor(private router: Router, private courseService: CourseService/*, private snackBar: MatSnackBar*/) { }
 
   ngOnInit(): void {
-    if(!sessionStorage.getItem('userName')){
+    if(!sessionStorage.getItem('userId')){
       this.router.navigate([`\login`]);
     }
   }
